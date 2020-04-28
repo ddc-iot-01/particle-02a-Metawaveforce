@@ -9,14 +9,15 @@
  * Author:
  * Date:
  */
+#include <Particle.h>
+#include <wire.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include "Particle.h"
-#include <wire.h>
+
 void setup();
 void loop();
 void printThehomeschooldev(String text);
-#line 11 "c:/Users/IoTPa/Documents/Brian/students/Jerry/particle-02a-Metawaveforce/MoistureReadingsCloud/src/MOISTUREREADINGSCLOUD.ino"
+#line 12 "c:/Users/IoTPa/Documents/Brian/students/Jerry/particle-02a-Metawaveforce/MoistureReadingsCloud/src/MOISTUREREADINGSCLOUD.ino"
 #define OLED_ADDR   0x3C
 Adafruit_SSD1306 display(-1);
 #define SSD1306_128_64

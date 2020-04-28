@@ -29,13 +29,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  12 .debug_ranges 00004220  00000000  00000000  0012bf24  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_macro  00037a3e  00000000  00000000  00130144  2**0
+ 13 .debug_macro  00037a3d  00000000  00000000  00130144  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   0002a321  00000000  00000000  00167b82  2**0
+ 14 .debug_line   0002a321  00000000  00000000  00167b81  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    0010354a  00000000  00000000  00191ea3  2**0
+ 15 .debug_str    0010354a  00000000  00000000  00191ea2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_frame  0000cafc  00000000  00000000  002953f0  2**2
+ 16 .debug_frame  0000cafc  00000000  00000000  002953ec  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -319,10 +319,10 @@ void loop() {
    delay(1000);
 }
    d4160:	b510      	push	{r4, lr}
+#include <wire.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include "Particle.h"
-#include <wire.h>
+
 #define OLED_ADDR   0x3C
 Adafruit_SSD1306 display(-1);
    d4162:	4c07      	ldr	r4, [pc, #28]	; (d4180 <_GLOBAL__sub_I_display+0x20>)
@@ -346,10 +346,10 @@ static Hal_Pin_Info* PIN_MAP = HAL_Pin_Map();
    delay(1000);
 }
    d4178:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+#include <wire.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include "Particle.h"
-#include <wire.h>
+
 #define OLED_ADDR   0x3C
 Adafruit_SSD1306 display(-1);
    d417c:	f001 bf08 	b.w	d5f90 <__aeabi_atexit>

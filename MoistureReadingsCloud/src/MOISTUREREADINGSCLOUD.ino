@@ -4,10 +4,11 @@
  * Author:
  * Date:
  */
+#include <Particle.h>
+#include <wire.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include "Particle.h"
-#include <wire.h>
+
 #define OLED_ADDR   0x3C
 Adafruit_SSD1306 display(-1);
 #define SSD1306_128_64
