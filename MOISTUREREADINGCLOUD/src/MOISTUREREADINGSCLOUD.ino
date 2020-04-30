@@ -50,7 +50,11 @@ void loop() {
  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(27,30);
+<<<<<<< HEAD
   display.print("Thomeschooldev");
+=======
+  display.print("Themeschooldev");
+>>>>>>> 9179716422d2b462d9864e28c1d170866650eb96
    delay(1000);
    display.display();
    delay(1000);

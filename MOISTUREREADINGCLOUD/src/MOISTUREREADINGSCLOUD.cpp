@@ -16,6 +16,7 @@
 
 void setup();
 void loop();
+<<<<<<< HEAD:MOISTUREREADINGCLOUD/src/MOISTUREREADINGSCLOUD.cpp
 <<<<<<< HEAD:MoistureReadingsCloud/MOISTUREREADINGSCLOUD/src/MOISTUREREADINGSCLOUD.cpp
 void printThehomeschooldev();
 #line 11 "c:/Users/217fa/Documents/IoT/particle-02a-Metawaveforce/MoistureReadingsCloud/MOISTUREREADINGSCLOUD/src/MOISTUREREADINGSCLOUD.ino"
@@ -23,6 +24,10 @@ void printThehomeschooldev();
 void printThehomeschooldev(String text);
 #line 12 "c:/Users/IoTPa/Documents/Brian/students/Jerry/particle-02a-Metawaveforce/MoistureReadingsCloud/src/MOISTUREREADINGSCLOUD.ino"
 >>>>>>> 9179716422d2b462d9864e28c1d170866650eb96:MOISTUREREADINGCLOUD/src/MOISTUREREADINGSCLOUD.cpp
+=======
+void printThehomeschooldev(String text);
+#line 12 "c:/Users/IoTPa/Documents/Brian/students/Jerry/particle-02a-Metawaveforce/MoistureReadingsCloud/src/MOISTUREREADINGSCLOUD.ino"
+>>>>>>> 9179716422d2b462d9864e28c1d170866650eb96:MoistureReadingsCloud/MOISTUREREADINGSCLOUD/src/MOISTUREREADINGSCLOUD.cpp
 #define OLED_ADDR   0x3C
 Adafruit_SSD1306 display(-1);
 #define SSD1306_128_64
