@@ -49,7 +49,7 @@ void loop() {
  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(27,30);
-  display.print("Thomeschooldev");
+  display.print("Themeschooldev");
    delay(1000);
    display.display();
    delay(1000);

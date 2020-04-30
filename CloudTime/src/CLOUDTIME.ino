@@ -16,7 +16,10 @@ void setup() {
 // wait for Serial monitor 13 Serial.println("-------- Begin Time Sync --------"); 14 }
 }
 // loop() runs over and over again, as quickly as it can execute.
-void loop() {
+void loop() {sync_my_time();
+delay (random(1000,6000));
+}
+
   // The core of your code will likely live here.
 }
 void sync_my_time() {
