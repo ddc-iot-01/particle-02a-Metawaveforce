@@ -1,0 +1,45 @@
+/*
+ * Project MOISTUREREADINGSCLOUD
+ * Description:
+ * Author:
+ * Date:
+ */
+const int dry = 584;
+const int wet = 289;
+ #include "Particle.h"
+ #include <Wire.h>
+unsigned long delayTime;
+int myArgon; 
+ int thirdMinute; 
+ int currentTime;
+
+
+// setup() runs once, when the device is first turned on.
+void setup() {
+  // Put initialization like pinMode and begin functions here.
+  Wire.begin() ;
+Serial.begin(9600); 
+while(!Serial);
+Serial.println("/nI2C Scanner");
+unsigned status;
+}
+
+
+
+// loop() runs over and over again, as quickly as it can execute.
+void loop() {
+  // The core of your code will likely live here.
+  int sensorVal = analogRead(A0);
+  int percentageHumididy = map(sensorVal,wet,dry,100,0);
+  Serial.print(percentageHumididy);
+  Serial.println("%");
+  delay(100);
+ currentTime = millis();
+ if((currentTime - thirdMinute)>180000){
+   Serial.println();
+   Serial.println("Minute");
+   thirdMinute= millis();
+ }
+}
+
+  

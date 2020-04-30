@@ -1,0 +1,78 @@
+#include "Particle.h"
+ #include <Wire.h>
+
+
+#define OLED_ADDR 0x3c
+
+#define   SSD_1306_128_64
+int delayTime = 180000;
+int Moisture = A5;
+int analogMoisture = 0;
+int mVoltage = 0;
+int i=0;
+
+
+// setup() runs once, when the device is first turned on.
+void setup() {
+  // Put initialization like pinMode and begin functions here.
+  Serial.begin(9600); 
+  Wire.begin();
+  display.begin(SSD1306_SWITCHCAPVCC,OLED_ADDR);
+  display.clearDisplay();
+  display.display();
+  printmoistureReading();
+  delay(delayTime);
+  pinMode (D7, OUTPUT);
+  particle.subcribe("toggle-led",toggleled, ALL_DEVICES);
+  pinMode (Moisture, INPUT);
+}
+
+
+
+// loop() runs over and over again, as quickly as it can execute.
+void loop() {
+  // The core of your code will likely live here.
+  if (Particle.connected()== false)
+       Particle.connect();
+       digitalWrite(D7, HIGH);
+       if (digitalRead(D7)= HIGH) {
+         while (i < 50 && digitalRead(D7)== HIGH) {
+           analogMoisture = analogRead(Moisture);
+           mVoltage = (analogMoisture*3300)/4090;
+           Particle.variable("mVoltage,mVoltage");
+           Particle.publish("mVoltage_reading");
+           String(mVoltage), PUBLIC();
+           delay(180000);
+
+         }
+       }
+void toggleLed (const char * event, const char * data) {
+  if (digitalRead)(D7)==LOW && String(data).equals('on')) {
+    digitalWrite(D7, HIGH);
+    }
+  {
+    else if (digitalRead(D7)= HIGH && String(data).equals("off"))
+    digitalWrite(D7, LOW);
+  }
+      /* code */
+    }
+    
+ void printhello() {
+  display.clearDisplay();
+  display.display();
+
+  // display a pixel in each corner of the screen
+  display.drawPixel(0, 0, WHITE);
+  display.drawPixel(127, 0, WHITE);
+  display.drawPixel(0, 63, WHITE);
+  display.drawPixel(127, 63, WHITE);
+
+  // display a line of text
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(27,30);
+  display.print("mVoltage_reading");
+
+  // update display with all of the above graphics
+  display.display();
+}

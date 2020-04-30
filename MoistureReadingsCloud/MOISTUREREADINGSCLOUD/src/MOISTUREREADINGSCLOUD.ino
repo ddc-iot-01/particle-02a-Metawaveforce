@@ -23,7 +23,9 @@ void setup() {
   display.clearDisplay( );
   display.display();
  //printsensorValue(sensorValue);
+ 
 delay(delayTime);
+
 }
  // Put initialization like pinMode and begin functions here.
   // loop() runs over and over again, as quickly as it can execute.
@@ -31,8 +33,12 @@ void loop() {
   int sensorValue = analogRead(A5);
   float voltage = sensorValue*(5.0 / 1023.0);
  Serial.println(voltage);
+ printThehomeschooldev();
+
+
  }
- void printThehomeschooldev(String text) {
+
+ void printThehomeschooldev() {
   display.clearDisplay();
   display.display();
   // display a pixel in each corner of the screen
@@ -43,10 +49,14 @@ void loop() {
  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(27,30);
-  display.print("printsensorValue");
+  display.print("Thomeschooldev");
    delay(1000);
-}
+   display.display();
+   delay(1000);
+   display.display();
 
+
+ }
   // The core of your code will likely live here.
 
       /* code */

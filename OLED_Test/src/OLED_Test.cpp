@@ -2,31 +2,28 @@
 //       THIS IS A GENERATED FILE - DO NOT EDIT       //
 /******************************************************/
 
-#line 1 "/home/brian/Particle/OLED_Test/src/OLED_Test.ino"
+#line 1 "c:/Users/217fa/Documents/IoT/particle-02a-Metawaveforce/OLED_Test/src/OLED_Test.ino"
 /*
- * Project OLED_Test
- * Description:
- * Author:
- * Date:
+ * Project      OLED_Test
+ * Description: Test OLED display on Particle Argon
+ * Author:      Brian Rashap
+ * Date:        13-APR-2020
  */
 
+
+// Particle: Install Library - Adafruit_SSD1306 is needed
 #include "Particle.h"
 #include <Wire.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
 
-// OLED display TWI address
+// Define OLED Display
 void setup();
 void loop();
 void printhello();
-#line 14 "/home/brian/Particle/OLED_Test/src/OLED_Test.ino"
+#line 16 "c:/Users/217fa/Documents/IoT/particle-02a-Metawaveforce/OLED_Test/src/OLED_Test.ino"
 #define OLED_ADDR   0x3C
-Adafruit_SSD1306 display(-1);
-
-
-#if (SSD1306_LCDHEIGHT != 64)
-#error("Height incorrect, please fix Adafruit_SSD1306.h!");
-#endif
+Adafruit_SSD1306 display(-1);  // the -1 means there is no reset pin
 
 /*=========================================================================
     SSD1306 Displays
